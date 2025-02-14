@@ -2,22 +2,6 @@
 Chiedere all’utente di inserire una parola Creare una funzione per capire se la parola inserita è palindroma*/
  //radar
 
-
- //funzione per testing
-function arrayReverse(word) {
-
-    let j = word.length;
-    const inputArr = [];
-    const reverseArr = [];
-    for (let i = 0; i < word.length; i++){
-        inputArr[i] = word[i];
-        j--;
-    }
-    console.log(inputArr);
-}
-
-
-
  function getPalindrome (word){
     //mettere ogni carattere della parola in un array
     const initialArr = [];
@@ -37,21 +21,27 @@ function arrayReverse(word) {
     
     //cofrontare i due array
     let equalCounter = true;
-    let errorCounter = false
     for(let i = 0; i < word.length; i++){
         if(initialArr[i] == reverseArr[i]){
             equalCounter = true;
-            errorCounter = false;
         } else {
             equalCounter = false;
-            errorCounter = true;
             break;
         }
     }
-    console.log(equalCounter, errorCounter);
-    
+    console.log(equalCounter);
+    return equalCounter;
  }
 
  const userWord = prompt('inserire una parola per scoprire se e palindroma');
  arrayReverse(userWord);
- getPalindrome(userWord);
+ const palindrome = getPalindrome(userWord);
+ 
+
+ if (palindrome == true){
+    console.log('la parola è palindroma');
+    
+ } else {
+    console.log('la parola non è palindroma');
+    
+ }
