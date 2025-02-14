@@ -20,13 +20,21 @@ function arrayReverse(word) {
 
  function getPalindrome (word){
     //mettere ogni carattere della parola in un array
-    const initialWord = [];
+    const initialArr = [];
+    const reverseArr = [];
     for (let i = 0; i < word.length; i++){
-        initialWord[i] = word[i];
+        initialArr[i] = word[i];
     }
-    console.log(initialWord);
+    console.log(initialArr);
     
     //creare un array analogo ed invertirlo
+    let j = initialArr.length;
+    for(let i = 0; i < initialArr.length; i++){
+        reverseArr[j] = initialArr[i];
+        j--;
+    }
+    console.log(reverseArr);
+    
     //cofrontare i due array
  }
 
