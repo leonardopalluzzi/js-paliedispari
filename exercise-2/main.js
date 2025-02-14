@@ -25,28 +25,35 @@ function sum(userNumb, pcNumb) {
 let userChoice = Number(prompt('scegliere 1 per pari 2 per dispari'));
 
 while (isNaN(userChoice) || userChoice !== 1 && userChoice !== 2) {
-    userChoice = Number(prompt('per favore inserire 1 per pari e 2 per dispari'))
+    userChoice = Number(prompt('per favore inserire 1 per pari e 2 per dispari'));
+}
+
+if (userChoice == 1){
+    userChoice = 'pari';
+} else if (userChoice == 2){
+    userChoice = 'dispari';
 }
 
 let userNumber = Number(prompt('scegliere un numero intero da 1 a 5'));
 while (isNaN(userNumber) || userNumber < 1 || userNumber > 5){
     userNumber = Number(prompt('per favore, scegliere un numero intero da 1 a 5'));
 }
+
 const pcNumber = randomNumber();
 const flag = sum(userNumber, pcNumber);
 console.log(pcNumber);
 
-if (userChoice == 1 && flag == true) {
-    alert('HAI VINTO! il risultato e PARI');
+if (userChoice == 'pari' && flag == true) {
+    alert(`HAI VINTO! il risultato e PARI. score: la tua scelta: ${userChoice}, il tuo numero: ${userNumber}, il numero del tuo avversario: ${pcNumber}`);
 
-} else if (userChoice == 2 && flag == true) {
-    alert('HAI PERSO il risultato e DISPARI');
+} else if (userChoice == 'dispari' && flag == true) {
+    alert(`HAI PERSO il risultato e DISPARI score: la tua scelta: ${userChoice}, il tuo numero: ${userNumber}, il numero del tuo avversario: ${pcNumber}`);
 
-} else if (userChoice == 1 && flag == false) {
-    alert('HAI PERSO il risultato e dispari');
+} else if (userChoice == 'pari' && flag == false) {
+    alert(`HAI PERSO il risultato e dispari score: la tua scelta: ${userChoice}, il tuo numero: ${userNumber}, il numero del tuo avversario: ${pcNumber}`);
 
-} else if (userChoice == 2 && flag == false) {
-    alert('HAI VINTO il risultato e DISAPRI');
+} else if (userChoice == 'dispari' && flag == false) {
+    alert(`HAI VINTO il risultato e DISAPRI score: la tua scelta: ${userChoice}, il tuo numero: ${userNumber}, il numero del tuo avversario: ${pcNumber}`);
 
 }
 
