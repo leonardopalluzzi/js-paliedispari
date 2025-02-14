@@ -44,3 +44,5 @@ Chiedere all’utente di inserire una parola Creare una funzione per capire se l
     alert('la parola non è palindroma');
     
  }
+
+ location.reload();
