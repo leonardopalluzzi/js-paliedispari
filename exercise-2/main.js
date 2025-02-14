@@ -5,7 +5,7 @@ L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un n
 
 
 function randomNumber() {
-    const numb = Math.floor(Math.random() * 5);
+    const numb = Math.floor(Math.random() * 5) + 1;
     return numb;
 }
 
