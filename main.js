@@ -34,14 +34,13 @@ Chiedere all’utente di inserire una parola Creare una funzione per capire se l
  }
 
  const userWord = prompt('inserire una parola per scoprire se e palindroma');
- arrayReverse(userWord);
  const palindrome = getPalindrome(userWord);
  
 
  if (palindrome == true){
-    console.log('la parola è palindroma');
+    alert('la parola è palindroma');
     
  } else {
-    console.log('la parola non è palindroma');
+    alert('la parola non è palindroma');
     
  }
