@@ -28,7 +28,7 @@ function arrayReverse(word) {
     console.log(initialArr);
     
     //creare un array analogo ed invertirlo
-    let j = initialArr.length;
+    let j = initialArr.length - 1;
     for(let i = 0; i < initialArr.length; i++){
         reverseArr[j] = initialArr[i];
         j--;
@@ -36,6 +36,10 @@ function arrayReverse(word) {
     console.log(reverseArr);
     
     //cofrontare i due array
+    if(initialArr == reverseArr){
+        console.log('la parola e palindroma');
+        
+    }
  }
 
  const userWord = prompt('inserire una parola per scoprire se e palindroma');
